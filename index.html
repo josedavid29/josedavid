@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulario</title>
+</head>
+<body>
+
+
+
+	 <form action="general.php" method="POST" >
+
+         <h2>PERSONAS</h2><br>
+        <br><input type="text" name="nombres" placeholder=" Nombre Completo" ><br><br>
+           <input type="text" name="apellidos" placeholder=" Apellido Completo" ><br><br>
+           <input type="date" name="f_nacimiento" placeholder=" Fecha de nacimiento" ><br><br>
+           <input type="text" name="direccion" placeholder=" Direccion de contacto" ><br><br>
+           <input type="text" name="nro_telefono" placeholder=" Numero telefonico" ><br><br>
+           <input type="text" name="nro_licencia" placeholder=" Licencia de conducir " ><br><br>
+        <label><input type ="checkbox" id="pasajero" name="es_pasajero" value="1">Pasajero</label>
+        <label><input type="checkbox" id="conductor" name="es_conductor" value="1">Conductor</label>
+        <label><input type="checkbox" id="socio_conductor" name="es_socio_conductor" value="1">Socio Conductor</label>
+        <label><input type="checkbox" id="socio" name="es_socio" value="1">Socio</label>
+        <label><input type="checkbox" id="dueno" name="es_dueno" value="1"> Dueño</label><br><br>
+            <h2>MARCAS</h2><br>
+        <br><input type="text" name="marca" placeholder="Marca del carro"><br>
+
+        <h2>COLORES</h2><br>
+
+        <br><label>COLOR DEL CARRO     <input type="color" name="color" ></label><br>
+
+
+        <h2>SUBMARCA</h2><br>
+        <br><input type="text" name="submarca" placeholder="Submarca"><br>
+
+
+        <h2>CARROS</h2><br>
+        <br><input type="text" name="ano" placeholder="Año del carro"><br>
+        <br><input type="text" name="placa" placeholder="Placa"><br>
+        <br><input type="text" name="poliza_seguro" placeholder="Poliza del Seguro"><br>
+        <br><input type="number" name="nro_pasajeros" placeholder="Numero de pasajeros"><br>
+        <h2>VIAJES</h2><br>
+        <br><label>Fecha y hora de  inicio          <input type="datetime-local" name="f_h_inicio" ></label><br>
+        <br><label>Fecha y hora final    <input type="datetime" name="f_h_final"></label><br><br>
+        <h2>METODO DE PAGO</h2><br>
+
+        <input type="submit" value="Enviar">
+          </form >
+
+
+
+     <form> 
+	  choose 
+	  <input type="checkbox" id="abc" onclick="checkme()"/>
+	  <p id="msg" style="display:none; background-color:grey;"> Hello </p>
+	  </form>
+     
+
+
+	<center>
+	<form action="">
+		<h3>pagos</h3>
+		<select>
+			<option name="selector" size="1" >Seleccione</option>
+			<option value="1" name="pago">Tarjeta de Credito</option>
+			<option value="2" name="pago">Tarjeta de Debito</option>
+			<option value="3" name="pago">Efectivo</option>
+		</select>
+					<input list="browsers" name="browser">
+			 	 <datalist id="browsers">
+			    	<option value="Tarjeta de Credito">
+			    	<option value="Tarjeta de Debito">
+			    	<option value="Efectivo">
+			 	 </datalist>
+			  		<input type="submit">
+	</form >
+	<form action="">
+		<h3>viajes</h3>
+		<h2>id_persona_pasajero</h2>
+		<input type="number" id="id_pasajero" name="id" step="1">
+		<h2>id_conductor</h2>
+		<input type="number" id="id_conductor" name="id" step="1">
+		<h2>Fecha inicio: </h2>
+		<input type="datetime-local" name="viajes">
+		<h2>Fecha final: </h2>
+		<input type="datetime-local" name="viajes">
+		<h2>punto de inicio</h2>
+		<input type="text" name="viajes">
+		<h2>punto final</h2>
+		<input type="text" name="viajes">
+	</form>
+	<form action="">
+		<h3>carros</h3>
+		<h2>id_carro</h2>
+		<input type="number" id="id_carro" name="id" step="1">
+		<h2>Numero de pasajeros</h2>
+	  <label for="pasajeros">Pasajeros:</label>
+	  <input type="number" id="pasajero" name="numero" step="1"><br>
+	  <h2>Año</h2>
+	  <input type="number" name="pasajero" min="1900" max="2022"><br>
+	  <h2>punto de inicio</h2>
+	<input type="text" name="viajes">
+	  <input type="submit" value="Submit">
+	</form>
+	</center>
+</body>
+<script>
+     	function checkme(){
+     		var cb= document.getElementById("abc");
+     		var text = document.getElementById("msg");
+     		if(cb.checked==true){
+     			text.style.dysplay="block";
+     		}else{
+     			text.style.display="none";
+     		}
+     	}
+     </script>
+</html>
